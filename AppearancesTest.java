@@ -1,6 +1,5 @@
 import junit.framework.TestCase;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Test;
 import java.util.*;
 
 public class AppearancesTest extends TestCase {
@@ -8,20 +7,18 @@ public class AppearancesTest extends TestCase {
 	// elem for each char.
 	private List<String> stringToList(String s) {
 		List<String> list = new ArrayList<String>();
-		for (int i = 0; i < s.length(); i++) {
+		for (int i=0; i<s.length(); i++) {
 			list.add(String.valueOf(s.charAt(i)));
 			// note: String.valueOf() converts lots of things to string form
 		}
 		return list;
 	}
-
 	@Test
 	public void testSameCount1() {
 		List<String> a = stringToList("abbccc");
 		List<String> b = stringToList("cccbba");
 		assertEquals(3, Appearances.sameCount(a, b));
 	}
-
 	@Test
 	public void testSameCount2() {
 		// basic List<Integer> cases
@@ -30,12 +27,11 @@ public class AppearancesTest extends TestCase {
 		assertEquals(2, Appearances.sameCount(a, Arrays.asList(1, 3, 3, 1)));
 		assertEquals(1, Appearances.sameCount(a, Arrays.asList(1, 3, 3, 1, 1)));
 	}
-
 	@Test
-	public void myTest() {
-		List<List<Integer>> a = new ArrayList<>();
-		List<List<Integer>> b = new ArrayList<>();
-		List<List<Integer>> c = new ArrayList<>();
+	public void myTest(){
+		List<List<Integer> > a = new ArrayList<>();
+		List<List<Integer> > b = new ArrayList<>();
+		List<List<Integer> > c = new ArrayList<>();
 		List<Integer> third = new ArrayList<>();
 		third.add(1);
 		third.add(3);
@@ -56,8 +52,9 @@ public class AppearancesTest extends TestCase {
 		c.add(first);
 		c.add(first);
 		c.add(third);
-		assertEquals(2, Appearances.sameCount(a, b));
-		assertEquals(1, Appearances.sameCount(a, c));
-		assertEquals(2, Appearances.sameCount(b, c));
+		assertEquals(2,Appearances.sameCount(a,b));
+		assertEquals(1,Appearances.sameCount(a,c));
+		assertEquals(2,Appearances.sameCount(b,c));
 	}
 }
+

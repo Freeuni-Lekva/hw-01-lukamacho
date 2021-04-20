@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Appearances {
-
+	
 	/**
 	 * Returns the number of elements that appear the same number
 	 * of times in both collections. Static method. (see handout).
@@ -29,5 +29,6 @@ public class Appearances {
 			}
 		}
 	}
-
+	
 }
+
