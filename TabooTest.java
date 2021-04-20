@@ -2,12 +2,13 @@
 // Taboo class tests -- nothing provided.
 
 
-import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-public class TabooTest extends TestCase {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class TabooTest  {
     @Test
     public void basicFollowTest(){
         List<String> curList = Arrays.asList("a","b","c","d","b","d","j");
